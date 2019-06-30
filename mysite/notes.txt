@@ -1,0 +1,9 @@
+[build initial project]
+> django-admin startproject mysite
+
+[run the project]
+> py manage.py runserver
+
+[build app inside project]
+> py manage.py startapp polls
+
