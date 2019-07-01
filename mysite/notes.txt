@@ -7,3 +7,25 @@
 [build app inside project]
 > py manage.py startapp polls
 
+-- -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- -- 
+the three-step guide to making model changes:
+
+Change your models (in models.py).
+Run python manage.py makemigrations to create migrations for those changes
+Run python manage.py migrate to apply those changes to the database. 
+
+
+[example build migration]
+> py manage.py migrate
+> py manage.py makemigrations polls
+> py manage.py sqlmigrate polls 0001
+> py manage.py migrate
+
+-- -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- -- 
+// sets the DJANGO_SETTINGS_MODULE environment variable, which gives Django the Python import path to your mysite/settings.py file
+> py manage.py shell
+
+
+-- -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- --  -- -- -- 
+-- user managment --
+> py manage.py createsuperuser
